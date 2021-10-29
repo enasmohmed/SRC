@@ -1,0 +1,387 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+  <!-- ================ Start Background Header ================== -->
+
+  <!-- particles.js container -->
+  <div id="particles-js"></div>
+
+
+  <!-- ================ Slider Sections ================== -->
+
+
+  <!-- Slider main container -->
+  <div class="swiper-header">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+
+      <!-- Start One Slides -->
+      <div class="swiper-slide">
+        <div class="col-md-6 col-sm-12 info">
+          <h2 class="title">Dox Solutions</h2>
+          <p class="content">Dox Solutions Cloud Programs to manage all business<br>
+             and control provisions on their resources from anywhere <br>and at any time.
+          </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+          <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Dox-Solutions/resize/Dox-Solutions-DesktopPic-01-min.png' %}" alt="First slide">
+        </div>
+      </div>
+      <!-- End One Slides-->
+
+      <!-- Start Two Slides -->
+      <div class="swiper-slide">
+        <div class="col-md-6 info">
+          <h2 class="title">Digital Marketing</h2>
+          <p class="content">- Marketing plans<br>- Social networking management<br>- Configuring search engines<br>- Advertising campaigns
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Digital-Marketting//resize/Digital-Marketting-Desktop-Pic-01-min.png' %}" alt="First slide">
+        </div>
+      </div>
+      <!-- End Two Slides-->
+
+      <!-- Start Three Slides -->
+      <div class="swiper-slide">
+        <div class="col-md-6 info">
+          <h2 class="title">Mobile Applications</h2>
+          <p class="content">We develop mobile applications that meet companies and<br> improve their activities in a professional and innovative manner.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Mobile-Apps/resize/Mobile-Apps-Development-Desktop-01-min.png' %}" alt="First slide">
+        </div>
+      </div>
+      <!-- End Three Slides-->
+
+      <!-- Start Four Slides -->
+      <div class="swiper-slide">
+        <div class="col-md-6 info">
+          <h2 class="title">E-commerce Solutions</h2>
+          <p class="content">The strength of your business activity through the<br> creation of an electronic website is your distinctive<br> gateway in the e-commerce.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/E-Commerce-Desktop/resize/E-Commerce-Desktop-Pic-01-min.png' %}" alt="First slide">
+        </div>
+      </div>
+      <!-- End Four Slides-->
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Progressbar -->
+    <div class="swiper-progress-bar">
+      <span class="slide_progress-bar"></span>
+    </div>
+  </div>
+
+  <!-- End Slider Testing Header -->
+
+  <main id="main">
+
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 text-center">
+            <p> We provide integrated digital solutions that helps you enhance your presence in the online business
+              world</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ====== Dox Solutions Section ============= --->
+    <div class="cards-container" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
+
+      <div class="container">
+        <h2 class="title">Dox Solutions</h2>
+        <div class="row mt-5">
+
+          <div class="cards__box">
+            {% for card in cards %}
+            <div class="Box col-md-4">
+              <div class="FlipBox">
+                <div class="Front">
+                  <img src="{{card.image.url}}">
+                </div>
+                <div class="Back">
+                  <div>
+                  <h3>{{card.title}}</h3>
+                  <p>{{card.description}}</p>
+                  <a href="{% url 'properties:dox_tabs'  %}" target="_blank">More Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- End Dox Solutions -->
+
+    <!-- ============= Elite Solutions Sections =========== --->
+    <div class="services contaienr-fluid">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
+        <div class="session-title">
+          <h2 class="elite-title">Elite Solutions</h2>
+        </div>
+        <div class="row">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="java">Digital Marketing</h2>
+                <p class="java">We provide you with all the means of marketing that will help you to flourish your product & publish your identity across web & globe.
+               </p>
+                <a class="card__btn" href="" class="">More Details <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+            <div class="face face2"></div>
+          </div>
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="java">Mobile Application</h2>
+                <p class="java">Our Mobile Applications can ease your work directly with your customers, allowing them to access your services, anywhere - any time.
+                </p>
+                <a class="card__btn" href="" class="">More Details <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+            <div class="face face2"></div>
+          </div>
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="java">Ecommerce Solutions</h2>
+                <p class="java">We will help you make your site better to sell your products
+                  online to upgrade your virtual world and achieve an increase in your profits
+                </p>
+                <a class="card__btn" href="" class="">More Details <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+            <div class="face face2"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- End Elite Solutions Sections -->
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6 col-md-6">
+            <img src="{% static 'assets/img/home-pages/whoWeAre-min.png' %}">
+          </div>
+          <div class="about col-lg-6 col-md-6 ">
+            <h3>Who We Are</h3>
+            <p>We are a Saudi based company having an insight into modern<br> technology that suits vision 2030 through
+              innovative & effective solutions in cloud computing which helps small, mid-size, startups & emerging
+              companies to achieve their goals & improve their work efficiencies with our rays of services that we offer
+              at Business Elite. Our core services include Cloud & ERP solutions, Ecommerce Design & Development, Mobile
+              App Developments & Digital Marketing.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+    <!-- ================ Start Cantact us =================== -->
+
+    <section class="video-Cantact-us" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
+      <div class="container">
+        <div class="title-box text-center white">
+          <h2 class="title">Cantact Us</h2>
+        </div>
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="video-caption-main">
+              <!-- video caption #1 -->
+              <div class="video-caption">
+                <div class="video-icon">
+                  <i class="fa fa-ravelry"></i>
+                </div>
+                <div class="video-caption-info">
+                  <h4>Take a look at this video to see how we work.</h4>
+                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
+                    aliqua.</p>
+                </div>
+              </div>
+              <!-- End caption #1 -->
+
+              <!-- video caption #2 -->
+              <div class="video-caption">
+                <div class="video-icon">
+                  <i class="fa fa-ravelry"></i>
+                </div>
+                <div class="video-caption-info">
+                  <h4>Take a look at this video to see how we work.</h4>
+                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
+                    aliqua.</p>
+                </div>
+              </div>
+              <!-- End caption #2 -->
+
+              <!-- video caption #3 -->
+              <div class="video-caption">
+                <div class="video-icon">
+                  <i class="fa fa-ravelry"></i>
+                </div>
+                <div class="video-caption-info">
+                  <h4>Take a look at this video to see how we work.</h4>
+                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
+                    aliqua.</p>
+                </div>
+              </div>
+              <!-- End caption #3 -->
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="play-video-cantact-us">
+              <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff"
+                allowfullscreen>
+
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ================ End Cantact us ====================== -->
+
+
+
+    <!-- ============= Way We Work Sections =============== -->
+    <div class="cards-work">
+      <div class="container" data-aos="flip-down" data-aos-duration="1000" data-aos-easing="ease-in-out-cubic">
+        <h2>The Way We Work</h2><br>
+        <p>Our work culture is a pure combination of professionalism & flexibility.
+          <br>We believe in fulfilling clients
+          requirement & scaling the business that ensures an overall progressive growth.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="{% static './assets/img/home-pages/Creativity.jpg' %}" alt="">
+              </div>
+              <div class="detail">
+                <h3>Creativity & Innovations</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="{% static './assets/img/home-pages/Planning.jpg' %}" alt="">
+              </div>
+              <div class="detail">
+                <h3>Planning & Execution</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="{% static './assets/img/home-pages/Flexible.jpg' %}" alt="">
+              </div>
+              <div class="detail">
+                <h3>Flexible Handling</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="{% static './assets/img/home-pages/Dilevery.jpg' %}" alt="">
+              </div>
+              <div class="detail">
+                <h3>On Time Dilevery</h3>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+
+
+      </div>
+    </div> <!-- End Way We Work Sections -->
+
+
+    <!-- ============= Blog Sections ============= --->
+    <div class="blog-content" data-aos="zoom-in">
+      <div class="container">
+        <h2>Our Blog</h2>
+        <div class="row">
+
+          {% for post in posts %}
+          <div class="col-md-3">
+            <div class="card">
+              <div class="cardTop-1" style="background-image: url({{post.image.url}});">
+              </div>
+              <div class="cardBottom">
+                <div class="cardText">
+                  <!--       Title and description will always show -->
+                  <h3 class="cardTitle"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+                  <h4 class="cardInfo">{{post.category}}</h4>
+                  <!--       Only visibile when parent element is hovered over -->
+                  <div class="cardHoverText">
+                    Lorem Ipsum
+                    <ul>
+                      <li>What is Lorem Ipsum?</li>
+                      <li>rambled it to make a type specimen book</li>
+                    </ul>
+                  </div>
+                  <!--       Only visibile when parent element is hovered over -->
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+
+  </main><!-- End main-->
+
+
+
+{% endblock body %}
+
+
+

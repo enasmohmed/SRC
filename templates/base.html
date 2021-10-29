@@ -1,0 +1,299 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Business Elite</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/Business-elite-logo-bg.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Fonts Logo -->
+  <link href="https://blogfonts.com/css/aWQ9MTcyMDk5JnN1Yj05OSZjPWQmdHRmPURlYWxlclN0cmlrZXMtMUduWWoudHRmJm49ZGVhbGVyLXN0cmlrZXMtMg/Dealer Strikes.ttf" rel="stylesheet" type="text/css"/>
+
+
+
+  <!-- Slider Cards Swiper-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- =======================================================
+  * Template Name:Business Elite
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ================ Start Navbar =================== -->
+
+  <div id="menu-jk" class="header-container container-fluid">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <img src="{% static 'assets/img/logo-none-bg.png' %}" alt="">
+            <button class="navbar-toggler d-lg-none d-md-block " type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <div class="col-lg-9 col-md-6">
+            <div class="container">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'properties:dox_tabs'%}" target="_blank">Dox Solutions </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'properties:elite_tabs'%}" target="_blank">Elite Solutions </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'blog:post_list' %}" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Language</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================ Start Social Media ============== -->
+  <div class="body-social-media">
+    <nav class="social">
+      <ul>
+        <li class="mail">
+          <a href="mailto:contactus@businesselitesoft.com" target="_blank">
+            contactus@businesselitesoft.com
+            <i class="far fa-envelope"></i>
+          </a>
+        </li>
+        <li class="phone">
+          <a href="#">
+            +966 12 667 6677
+            <i class="fas fa-phone"></i>
+          </a>
+        </li>
+        <li class="whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=966566333723" target="_blank">
+            +966 56 633 3723
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li class="messenger">
+          <a href="https://web.facebook.com/businesselitesoft" target="_blank">
+            Business Elite Chat
+            <i class="fab fa-facebook-messenger icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  {% block body %}
+
+  {% endblock body %}
+
+
+
+  <!-- ================= Footer Sections =============== --->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Business Elite</h3>
+            <!--  <p>
+                Business Elite is a Saudi company
+                <br> specializes in cloud computing 
+              </p> -->
+
+            <i class="fa fa-map-marker"></i>
+            <p class="text">
+              Saudi Arabia,Jeddah,<br>
+              Al Sharafeyah ,<br>
+              Khalid Ibn Al Waleed <br><br>
+            </p>
+            <i class="fa fa-mobile"></i>
+            <p class="text">+96656044363</p>
+            <br>
+            <i class="fa fa-envelope"></i>
+            <p class="text">contactus@businesselitesoft.com</p><br>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>We would love to have a word with you. Feel free to connect with us through the communication medium that
+              suits you best.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/businesselite4?s=11" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://web.facebook.com/businesselitesoft" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/businesselitesoft/" class="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:6843502489606623232" class="linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Business Elite</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#"> Business Elite</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- Links -->
+  <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  <div id="preloader"></div>
+
+
+
+  <!-- Chat Live -->
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <div class="elfsight-app-1b8cf06e-c727-4e5e-93cc-4caae9edbe29"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <!-- Header Animation -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/js/particles.js' %}"></script>
+  <script src="{% static 'assets/js/app.js' %}"></script>
+
+    <!-- stats.js -->
+  <script src="{% static 'assets/lib/stats.js' %}"></script>
+  <script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  </script>
+
+    <!-- Link Swiper's CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

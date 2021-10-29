@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+
+  <!-- ============= Start Tabs Sections ===========================  -->
+
+  <div class="tabs-section">
+    <div id="wrapper">
+      <div class="content">
+        <!-- Tab links -->
+        <div class="tabs" style="margin-top: 9%;">
+
+          {% for sub in sub_category_elite %}
+          <button class="tablinks show {% if forloop.first %} active {% endif %}" data-country="{{sub.name}}">
+            <p data-title="{{sub.name}}">{{sub.name}}</p>
+          </button>
+          {% endfor %}
+
+        </div>
+
+             <!-- Tab content -->
+          <div class="wrapper_tabcontent">
+            {% for detail in details %}
+            <div id="{{detail.category}}" class="tabcontent fade show {% if forloop.first %} active {% endif %}">
+              <h3>{{detail.title}}</h3>
+              <p>{{detail.description}}</p>
+              <h4>{{detail.id}}</h4>
+            </div>
+            {% endfor %}
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock body %}

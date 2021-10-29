@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+
+  <!-- ============= Start Tabs Sections ===========================  -->
+   <main id="main">
+      <div class="tabs-section">
+      <div id="wrapper">
+        <div class="content">
+          <!-- Tab links -->
+          <div class="tabs" style="margin-top: 9%;">
+            {% for sub in sub_category_dox %}
+            <button class="tablinks show {% if forloop.first %} active {% endif %}" data-country="{{sub.name}}">
+              <p data-title="{{sub.name}}">{{sub.name}}</p>
+            </button>
+            {% endfor %}
+
+          </div>
+
+               <!-- Tab content -->
+            <div class="wrapper_tabcontent">
+              {% for detail in details %}
+              <div id="{{detail.category}}" class="tabcontent show {% if forloop.first %} active {% endif %}">
+                <!-- ============= Title Inter Sub Category ============== -->
+                <!-- Postcard -->
+                <article class="postcard col-md-12 col-sm-12" data-aos="zoom-in" data-aos-duration="3000"
+                  data-aos-easing="ease-in-out-cubic">
+                  <!-- Image -->
+                  <div class="postcard__image" role="img" aria-label="postcard image man looking to left" title="image">
+
+                      <img class="d-block w-100" src="{{detail.image.url}}">
+                  </div>
+
+                  <!-- Body -->
+                  <div class="postcard__body">
+                    <!-- Text -->
+                    <div class="postcard__text">
+                      <h2 class="postcard__title">
+                        <a class="postcard__title--link" href="#">{{detail.title}}</a>
+                      </h2>
+                      <p class="postcard__description">{{detail.description}}</p>
+                    </div>
+
+                  </div>
+                </article>
+
+                <div class="alert alert-primary" role="alert">
+                  {{detail.message}}
+                </div>
+
+                {% if detail  %}
+                <!-- ============ Slider Cards Sections =================== -->
+                <!-- TESTIMONIALS -->
+                <section class="testimonials" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
+                  <h3 class="mb-3">DoxERP Programe Features </h3>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div id="customers-testimonials" class="owl-carousel">
+
+                          <!--TESTIMONIAL 1 -->
+                          {% for card in cards_features %}
+                          <div class="item">
+                            <div class="shadow-effect">
+                              <i class="{{card.icon_card}}"></i>
+                              <div class="item-details">
+                                <h5>{{card.title_card}}</h5>
+                                <p>{{card.description_card}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          {% endfor %}
+                          <!--END OF TESTIMONIAL 1 -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- END OF TESTIMONIALS -->
+                {% else %}
+                   <div class="alert alert-primary" role="alert">
+                    {{detail.message}}
+                   </div>
+                {% endif  %}
+
+                <!-- ============= Program Units Section =================== -->
+                <section class="programe-units">
+                  <div class="container" data-aos="zoom-in">
+                    <h3 class="title">Program Units</h3>
+                    <div class="slider">
+                      <div class="m-slider program__units">
+                        <div class="swiper-wrapper">
+                        {% for card in cards_units %}
+                          <div class="m-slider__item swiper-slide">
+                            <div class="box">
+                              <div class="m-card" ontouchstart>
+                                <div class="m-card__header">
+                                  <i class="{{card.icon_program}}"></i>
+                                </div>
+                                <div class="m-card__body">
+                                  <h3>{{card.title_program}}</h3>
+                                  <p>{{card.description_program}}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        {% endfor %}
+                        </div><!-- .swiper-wrapper // -->
+                        <div class="swiper-pagination"></div>
+                      </div><!-- .m-slider // -->
+                    </div><!-- .slider // -->
+
+                  </div>
+                </section>
+
+
+              </div>
+              {% endfor %}
+
+            </div>
+        </div>
+      </div>
+    </div>
+   </main>
+
+{% endblock body %}
